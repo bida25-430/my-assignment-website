@@ -1,106 +1,110 @@
 <!DOCTYPE html>
-<html lang="en"
+<html lang="en">
 <head>
-    <meta charset=UTF-8>
-    <meta name=viewport content=width=device-width, initial-scale=1.0>
-    <title>COOL DRIPS | Latest Fashion</title>
-    <style>
-        /* Base Styles */
-•	{ margin: 0; padding: 0; box-sizing: border-box; font-family: Helvetica, sans-serif; }
-        Body { background-color: #fff; color: #1a1a1a; }
-
-        /* Navigation */
-        Nav {
-            Display: flex;
-            Justify-content: space-between;
-            Align-items: center;
-            Padding: 20px 5%;
-            Border-bottom: 1px solid #eee;
-            Position: sticky; top: 0; background: white; z-index: 100;
-        }
-        .logo { font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; }
-        .nav-links a { text-decoration: none; color: #1a1a1a; margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; }
-
-        /* Hero Section */
-        .hero {
-            Height: 40vh;
-            Background: #f4f4f4; 
-            Display: flex;
-            Flex-direction: column;
-            Justify-content: center;
-            Align-items: center;
-            Text-align: center;
-            Background-image: url(‘https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1500&q=80’);
-            Background-size: cover;
-            Background-position: center;
-            Color: white;
-        }
-        .hero h1 { font-size: 4rem; margin-bottom: 1rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
-        .btn {
-            Background: white; color: black; padding: 15px 40px;
-            Text-decoration: none; font-weight: bold; text-transform: uppercase;
-            Transition: 0.3s;
-        }
-        .btn:hover { background: #000; color: #fff; }
-
-        /* Product Grid */
-        .section-title { padding: 50px 5% 20px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; }
-        .product-grid {
-            Display: grid;
-            Grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            Gap: 20px;
-            Padding: 0 5% 50px;
-        }
-        .product-card { border: 1px solid #eee; padding-bottom: 15px; transition: transform 0.3s; }
-        .product-card:hover { transform: translateY(-5px); }
-        .product-img { width: 100%; height: 350px; background: #eee; object-fit: cover; }
-        .product-info { padding: 15px; text-align: center; }
-        .price { color: #888; margin-top: 5px; }
-
-        /* Footer */
-        Footer { background: #1a1a1a; color: white; padding: 50px 5%; text-align: center; }
-    </style>
+         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>COOL DRIPS | Fashion Inspiration</title>
+        <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
+    <!--Header Selection -->
+    <header>
         <div class=logo>COOL DRIPS</div>
-        <div class=nav-links>
-            <a href=#>Shop</a>
-            <a href=#>Drops</a>
-            <a href=#>Cart (0)</a>
-        </div>
-    </nav>
-
-    <header class=hero>
-        <h1>THE NEW DRIP IS HERE</h1>
-        <a href=#shop class=btn>Shop Collection</a>
+            <div class=nav-links>
+                <a href="help.html">Help</a>
+                <a href="sign-in.html">Sign-in</a>
+            </div>
     </header>
 
-    <h2 class=section-title>New Arrivals</h2>
-    <div class=product-grid id=shop>
-        <div class=product-card>
-            <img src=https://images.unsplash.com/photo-1554568218-0f1715e72254?auto=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
-            <div class=product-info>
-                <p>Oversized Graphic Tee</p>
-                <p class=price>$30.00</p>
-            </div>
+    <!-- navigation -->
+     <nav>    
+        <div class=user-actions>
+            <input type="text" placeholder="Search..">
+            <a href="#favourate">Favourate</a>
+            <a href="#cart">Cart</a>
         </div>
-        <div class=product-card>
-            <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
-            <div class=product-info>
-                <p>Essential Hoodie  Black</p>
-                <p class=price>$40.00</p>
-            </div>
+       <div class=hero>
+            <h1>THE NEW DRIP IS HERE</h1>
+            <a href="shop-collection.html" class=btn>Shop Collection</a>
+       </div>
+    
+    <!--Main Content-->
+    <main>
+        <div class=slideshow-container>
+
+            <div class=mySlides fade>
+            <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?"auto="format&fit=crop&w=1500&q=80 style=width:100%">
+            <div class=text>MENS LATEST DRIP</div>
         </div>
-        <div class=product-card>
-            <img src=https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=500&q=60 alt=Shorts class=product-img>
-            <div class=product-info>
-                <p>Cargo Mesh Shorts</p>
-                <p class=price>$25.00</p>
-            </div>
+
+        <div class=mySlides fade>
+            <img src="https://images.unsplash.com/photo-1552874869-5c39ec9288dc?"auto="format&fit=crop&w=1500&q=80 style=width:100%">
+            <div class=text>WOMENS SEASONAL STEALS</div>
         </div>
-    </div>
+
+        <div class=mySlides fade>
+            <img src="https://images.unsplash.com/photo-1519457431-7571f0181146?"auto="format&fit=crop&w=1500&q=80 style=width:100%">
+            <div class=text>KIDS STREETWEAR CLASSICS</div>
+        </div>
+
+            <a class=prev onclick=plusSlides(-1)>&#10094;</a>
+            <a class=next onclick=plusSlides(1)>&#10095;</a>
+       </div>
+
+    <br>
+
+        <div style=text-align:center>
+            <span class=dot onclick=currentSlide(1)></span>
+            <span class=dot onclick=currentSlide(2)></span>
+            <span class=dot onclick=currentSlide(3)></span>
+        </div>
+
+
+
+
+
+    <script>
+        LetslideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) { showSlides(slideIndex += n); }
+        function currentSlide(n) { showSlides(slideIndex = n); }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";}
+    
+        for (i = 0; i < dots.length; i++) {
+         Dots[i].className = dots[i].className.replace( active, );}
+  
+        Slides[slideIndex-1].style.display = block;
+        Dots[slideIndex-1].className +=  "active";}
+ 
+    </script>
+
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <footer>
         <p>&copy; 2026 COOL DRIPS. STAY DRIPPY.</p>
