@@ -21,8 +21,8 @@
      <nav>    
         <div class=user-actions>
             <input type="text" placeholder="Search..">
-            <a href="#favourate">Favourate</a>
-            <a href="#cart">Cart</a>
+            <a href="Favourite.html">Favourate</a>
+            <a href="cart.html">Cart</a>
         </div>
        <div class=hero>
             <h1>THE NEW DRIP IS HERE</h1>
@@ -31,81 +31,35 @@
     
     <!--Main Content-->
     <main>
-        <div class=slideshow-container>
+        <section>
+            <h2 class=section-title>New Arrivals</h2>
+            <div class="product">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+            </div>
 
-            <div class=mySlides fade>
-            <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?"auto="format&fit=crop&w=1500&q=80 style=width:100%">
-            <div class=text>MENS LATEST DRIP</div>
-        </div>
-
-        <div class=mySlides fade>
-            <img src="https://images.unsplash.com/photo-1552874869-5c39ec9288dc?"auto="format&fit=crop&w=1500&q=80 style=width:100%">
-            <div class=text>WOMENS SEASONAL STEALS</div>
-        </div>
-
-        <div class=mySlides fade>
-            <img src="https://images.unsplash.com/photo-1519457431-7571f0181146?"auto="format&fit=crop&w=1500&q=80 style=width:100%">
-            <div class=text>KIDS STREETWEAR CLASSICS</div>
-        </div>
-
-            <a class=prev onclick=plusSlides(-1)>&#10094;</a>
-            <a class=next onclick=plusSlides(1)>&#10095;</a>
-       </div>
-
-    <br>
-
-        <div style=text-align:center>
-            <span class=dot onclick=currentSlide(1)></span>
-            <span class=dot onclick=currentSlide(2)></span>
-            <span class=dot onclick=currentSlide(3)></span>
-        </div>
-
-
-
-
-
-    <script>
-        LetslideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) { showSlides(slideIndex += n); }
-        function currentSlide(n) { showSlides(slideIndex = n); }
-
-        function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";}
-    
-        for (i = 0; i < dots.length; i++) {
-         Dots[i].className = dots[i].className.replace( active, );}
-  
-        Slides[slideIndex-1].style.display = block;
-        Dots[slideIndex-1].className +=  "active";}
- 
-    </script>
-
-            
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <h3 class=section-tittle>Recommendations</h3>
+            <div class="Product">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+                <img src="">
+            </div>
+             
     <footer>
         <p>&copy; 2026 COOL DRIPS. STAY DRIPPY.</p>
     </footer>
