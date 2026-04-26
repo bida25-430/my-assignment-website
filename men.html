@@ -4,78 +4,474 @@
          <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Men</title>
+
+        <style>
+          /*Reset default browser spacing */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+/* header container */
+.header {
+   
+    Padding: 10px 0; 
+    Border-bottom: 1px solid #ddd; 
+}
+
+.logo-and-links {
+    Display: flex;
+    Justify-content: center; 
+    Align-items: center;     
+    Max-width: 1200px;       
+    Margin: 0 auto;          
+    Padding: 0 40px;        
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacer-left {
+    Flex: 1;
+}
+
+.header-action-links {
+    Display: flex;
+    Gap: 10px; 
+    Margin-left: auto; 
+    Flex: 1; 
+    Justify-content: flex-end;
+    margin-right: -150px;
+}
+
+.action-link {
+    Text-decoration: none; 
+    Color: #000000;          
+    Font-size: 16px;
+    Font-weight: 700;
+}
+
+.action-link:hover {
+    Color: #555;
+}
+
+.header-action-links-right {
+  text-align: right;
+}
+
+.header-action-links-right a{
+  text-decoration: none;
+  color: #000000;
+  margin-right: 10px;
+}
+
+.header-action-links-right input[type=text] {
+  padding: 6px; 
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  margin-left: 80px;  
+}
+
+@media screen and (max-width: 600px) {
+  .header-action-links-right, .header-action-links-right input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+
+  }
+  .header-action-links-right input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+/* Navigation */
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.sidenav {
+  height: 60%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  left: 0;
+  background-color: #ffffff; 
+  overflow-x: hidden; 
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/* Style page content */
+.main {
+  margin-left: 160px; 
+  padding: 0px 100px;
+}
+
+/* SLIDESHOW STYLES */
+.slideshow-container {
+  Max-width: 60%;
+  Position: relative;
+  Margin: auto;
+  Overflow: hidden;
+  Height: 500px; 
+  margin-left: 160px;
+}
+
+.mySlides { display: none; height: 100%; }
+.mySlides img { object-fit: cover; height: 100%; }
+
+/* Next & prev buttons */
+.prev, .next {
+  Cursor: pointer;
+  Position: absolute;
+  Top: 50%;
+  Width: auto;
+  Margin-top: -22px;
+  Padding: 16px;
+  Color: white;
+  Font-weight: bold;
+  Font-size: 18px;
+  Transition: 0.6s ease;
+  Border-radius: 0 3px 3px 0;
+  User-select: none;
+  Background-color: rgba(0,0,0,0.3);
+}
+.next { right: 0; border-radius: 3px 0 0 3px; }
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+
+/* Caption text */
+.text {
+  Color: #f2f2f2;
+  Font-size: 2rem;
+  Font-weight: bold;
+  Padding: 8px 12px;
+  Position: absolute;
+  Bottom: 50px;
+  Width: 100%;
+  Text-align: center;
+  Text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* The dots */
+.dot {
+  Cursor: pointer;
+  Height: 12px;
+  Width: 12px;
+  Margin: 0 5px;
+  Background-color: #bbb;
+  Border-radius: 50%;
+  Display: inline-block;
+  Transition: background-color 0.6s ease;
+}
+.active, .dot:hover { background-color: #1a1a1a; }
+
+.fade {
+  Animation-name: fade;
+  Animation-duration: 1.5s;
+}
+@keyframes fade {
+  From {opacity: .4}
+  To {opacity: 1}
+}
+
+/* Product Grid */
+        .section-title { padding: 50px 5% 20px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; }
+        .product-grid {
+            Display: grid;
+            Grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            Gap: 20px;
+            Padding: 0 5% 50px;
+        }
+        .card { border: 1px solid #eee; padding-bottom: 15px; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .product-img { width: 100%; height: 350px; background: #eee; object-fit: cover; }
+        .product-info { padding: 15px; text-align: center; }
+        .price { color: #888; margin-top: 5px; }
+        .card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.5;
+}
+
+/* Footer */
+footer { 
+   background: #000000; 
+   color: white; 
+   padding: 5px; 
+   text-align: center; 
+   bottom: 0;
+   
+}
+
+      </style>
 </head>
 <body>
 
     <!--Header Selection -->
-    <header>
-        <div class=logo>COOL DRIPS</div>
-            <div class=nav-links>
-                <a href="help.html">Help</a>
-                <a href="sign-in.html">Sign-in</a>
+    <header class="header">
+        <div class="logo-and-links">
+            <div class="spacer-left"></div> 
+            <h1 class="logo">COOL DRIPS</h1>
+            <div class="header-action-links">
+                <a href="help.html" class="action-link">Help</a>
+                <a href="sign-in.html" class="action-link">Sign-in</a>
             </div>
-        <h1>MEN</h1>
+        </div>
+            <div class="header-action-links-right">
+              <input type="text" placeholder="Search..">
+              <a href="Favourite.html">Favourite</a>
+              <a href="cart.html">Cart</a>
+            </div>  
+        </div>
     </header>
 
     <!-- navigation -->
     <nav>
+      <div class="topnav">
         <a href="index.html">Home</a>
         <a href="men.html">Men</a>
         <a href="women.html">Women</a>
         <a href="inspo.html">Outfit Inspiration</a>
+       </div>
 
-        <div class=user-actions>
-            <input type="text" placeholder="Search..">
-            <a href="Favourite.html">Favourate</a>
-            <a href="cart.html">Cart</a>
-        </div>
+    <!-- Side navigation -->
+      <div class="sidenav">
+        <a href="m-shoes.html">Shoes</a>
+        <a href="m-accessories.html">Accessories</a>
+        <a href="m-jeans.html">Jeans</a>
+        <a href="m-hooodies.html">Hoodies</a>
+        <a href="m-bottoms.html">Bottoms</a>
+        <a href="m-tees.html">Tees</a>
+      </div>
     </nav>
 
-    <!--Main Content-->
+    <!--Page Content-->
     <main>
-            <!--Main Content-->
-    <main>
-        <section class="slider-container">
-        
-        <div class=user-navigations>
-            <a href="m-shoes.html"class=btn>Shoes</a>
-            <a href="m-jeans.html" class=btn>Jeans</a>
-            <a href="m-accessories.html" class=btn>Accessories</a>
-            <a href="m-tees.html" class=btn>Tees</a>
-            <a href="m-bottoms.html" class=btn>Bottoms</a>
-            <a href="m-hooodies.html" class=btn>Hoodies</a>
-        </div>
-                   
-        <h2 class=section-title>TOP SALES</h2>
-            <div class=product-grid id=>
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-            </div>
+      <div class="main">
 
-            <h3 class=section-tittle>RECOMMENDATIONS</h3>
-            <div class="Product">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
+        <h2>Trending</h2>
+
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <img src="Formal.jpg"=format&fit=crop&w=1500&q=80 style="width:100%">
+            <div class="text">MENS LATEST DRIP</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src=https://images.unsplash.com/photo-1552874869-5c39ec9288dc?auto=format&fit=crop&w=1500&q=80 style="width:80%">
+            <div class="text">WOMENS SEASONAL STEALS</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src=https://images.unsplash.com/photo-1519457431-7571f0181146?auto=format&fit=crop&w=1500&q=80 style="width:80%">
+            <div class="text">KIDS STREETWEAR CLASSICS</div>
+          </div>
+          <div class="mySlides fade">
+            <img src="Streetwear.jpg"=format&fit=crop&w=1500&q=80 style="width:80%">
+            <div class="text"></div>
+          </div>
+          <div class="mySlides fade">
+            <img src=https://images.unsplash.com/photo-1552874869-5c39ec9288dc?auto=format&fit=crop&w=1500&q=80 style="width:80%">
+            <div class="text">WOMENS SEASONAL STEALS</div>
+          </div>
+            
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+      </div>
+
+      <h3 class=section-title>New Arrivals</h3>
+        <div class=product-grid id=shop>
+          <div class="card">
+            <img src=https://images.unsplash.com/photo-1554568218-0f1715e72254?auto=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
+              <div class=product-info>
+                <p>Oversized Graphic Tee</p>
+                <p class=price>$30.00</p>
+                <p><button>Add to Cart</button></p>
+              </div>
+          </div>
+          <div class="card">
+              <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+              <div class=product-info>
+              <p>Essential Hoodie  Black</p>
+              <p class=price>$40.00</p>
+              <p><button>Add to Cart</button></p>
             </div>
+          </div>
+          <div class="card">
+            <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+            <div class=product-info>
+              <p>Essential Hoodie  Black</p>
+              <p class=price>$40.00</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+          </div>
+          <div class="card">
+            <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+            <div class=product-info>
+              <p>Essential Hoodie  Black</p>
+              <p class=price>$40.00</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+          </div>
+          <div class="card">
+            <img src=https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=500&q=60 alt=Shorts class=product-img>
+              <div class=product-info>
+                <p>Cargo Mesh Shorts</p>
+                <p class=price>$25.00</p>
+                <p><button>Add to Cart</button></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4 class=section-title>Jeans</h4>
+            <div class=product-grid id=shop>
+                <div class="card">
+                    <img src=https://images.unsplash.com/photo-1554568218-0f1715e72254?auto=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
+                    <div class=product-info>
+                    <p>Oversized Graphic Tee</p>
+                    <p class=price>$30.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Essential Hoodie  Black</p>
+                    <p class=price>$40.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Essential Hoodie  Black</p>
+                    <p class=price>$40.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                        <p>Essential Hoodie  Black</p>
+                        <p class=price>$40.00</p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src=https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=500&q=60 alt=Shorts class=product-img>
+                    <div class=product-info>
+                    <p>Cargo Mesh Shorts</p>
+                    <p class=price>$25.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>   
+          </div>    
+        </div>
+      </div>  
+    </main>
+
+    <script>
+let slideIndex = 5;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 10000); // Change image every 5 seconds
+}
+        </script>
 
     <footer>
-        <p>&copy; 2026 COOL DRIPS. STAY DRIPPY.</p>
+      <p>&copy; 2026 COOL DRIPS. STAY DRIPPY.</p>
     </footer>
 
 </body>

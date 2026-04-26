@@ -2,50 +2,43 @@
 body {
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
-    background-color: #121212;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
 }
 
 /*Header */
 header {
-    padding: 30px;
-    background-color: #000000;
-    color: white;
-}
-.logo { 
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 2.5rem; 
-    letter-spacing: -1px;
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     text-align: center;
- }
-.nav-links {
-    text-align: end;
-
 }
-
-nav a {
-    color: white;
 
 /* Navigation */
+.topnav {
+  float: inline-end;
 }
 .user-actions {
     text-align: right;
-    color: white;
+    color: rgb(0, 0, 0);
 }
+
+.a nav {
+    color: #000000;
+}
+
 
 /* Hero Section */
 .hero {
-    Height: 25vh;
+    height: 25vh;
     Background: #f4f4f4; 
-    Flex-direction: column;
-    Justify-content: center;
+    flex-direction: column;
     Align-items: center;
     Text-align: center;
     Background-image: url(https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1500&q=80’);
     Background-size: cover;
-    Background-position: center;
-    Color: rgb(39, 36, 36);
+    background-position: center;
+    color: rgb(39, 36, 36);
 }
 .hero h1 { font-size: 4rem; 
     margin-bottom: 1rem; 
@@ -53,78 +46,14 @@ nav a {
          
 }
 .btn {
-    Background: white; color: black; padding: 15px 40px;
-    Text-decoration: none; font-weight: bold; text-transform: uppercase;
-    Transition: 0.3s;
+    background: white; color: black; padding: 15px 40px;
+    text-decoration: none; font-weight: bold; text-transform: uppercase;
+    transition: 0.3s;
 }
 .btn:hover { background: #000; color: #fff; }
 
-/* SLIDESHOW STYLES */
-.slideshow-container {
-  Max-width: 100%;
-  Position: relative;
-  Margin: auto;
-  Overflow: hidden;
-  Height: 500px; /* Adjust height as needed */
-}
+* {box-sizing:border-box}
 
-.mySlides { display: none; height: 100%; }
-.mySlides img { object-fit: cover; height: 100%; }
-
-/* Next & prev buttons */
-.prev, .next {
-  Cursor: pointer;
-  Position: absolute;
-  Top: 50%;
-  Width: auto;
-  Margin-top: -22px;
-  Padding: 16px;
-  Color: rgb(152, 55, 55);
-  Font-weight: bold;
-  Font-size: 18px;
-  Transition: 0.6s ease;
-  Border-radius: 0 3px 3px 0;
-  User-select: none;
-  Background-color: rgba(0,0,0,0.3);
-}
-.next { right: 0; border-radius: 3px 0 0 3px; }
-.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
-
-/* Caption text */
-.text {
-  Color: #f2f2f2;
-  Font-size: 2rem;
-  Font-weight: bold;
-  Padding: 8px 12px;
-  Position: absolute;
-  Bottom: 50px;
-  Width: 100%;
-  Text-align: center;
-  Text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-}
-
-/* The dots */
-.dot {
-  Cursor: pointer;
-  Height: 12px;
-  Width: 12px;
-  Margin: 0 5px;
-  Background-color: #bbb;
-  Border-radius: 50%;
-  Display: inline-block;
-  Transition: background-color 0.6s ease;
-}
-.active, .dot:hover { background-color: #1a1a1a; }
-
-/* Fading animation */
-.fade {
-  Animation-name: fade;
-  Animation-duration: 1.5s;
-}
-@keyframes fade {
-  From {opacity: .4}
-  To {opacity: 1}
-}
 
 
 

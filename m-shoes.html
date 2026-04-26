@@ -1,52 +1,588 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Men Shoes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men Shoes</title>
+
+    <style>
+                  /*Reset default browser spacing */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+/* header container */
+.header {
+   
+    Padding: 10px 0; 
+    Border-bottom: 1px solid #ddd; 
+}
+
+.logo-and-links {
+    Display: flex;
+    Justify-content: center; 
+    Align-items: center;     
+    Max-width: 1200px;       
+    Margin: 0 auto;          
+    Padding: 0 40px;        
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacer-left {
+    Flex: 1;
+}
+
+.header-action-links {
+    Display: flex;
+    Gap: 10px; 
+    Margin-left: auto; 
+    Flex: 1; 
+    Justify-content: flex-end;
+    margin-right: -150px;
+}
+
+.action-link {
+    Text-decoration: none; 
+    Color: #000000;          
+    Font-size: 16px;
+    Font-weight: 700;
+}
+
+.action-link:hover {
+    Color: #555;
+}
+
+.header-action-links-right {
+  text-align: right;
+}
+
+.header-action-links-right a{
+  text-decoration: none;
+  color: #000000;
+  margin-right: 10px;
+}
+
+.header-action-links-right input[type=text] {
+  padding: 6px; 
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  margin-left: 80px;  
+}
+
+@media screen and (max-width: 600px) {
+  .header-action-links-right, .header-action-links-right input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+
+  }
+  .header-action-links-right input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+/* Navigation */
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Page Content */
+        .section-title { padding: 50px 5% 20px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; }
+        .product-grid {
+            Display: grid;
+            Grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            Gap: 20px;
+            Padding: 0 5% 50px;
+        }
+        .card { border: 1px solid #eee; padding-bottom: 15px; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .product-img { width: 100%; height: 350px; background: #eee; object-fit: cover; }
+        .product-info { padding: 15px; text-align: center; }
+        .price { color: #888; margin-top: 5px; }
+        .card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer { 
+   background: #000000; 
+   color: white; 
+   min-width: 100%; 
+   text-align: center; 
+   bottom: 0;
+   position: fixed;
+   
+}
+
+    </style>
 </head>
 <body>
 
     <!--Header Selection -->
-    <header>
-        <div class=logo>COOL DRIPS</div>
-            <div class=nav-links>
-                <a href="help.html">Help</a>
-                <a href="sign-in.html">Sign-in</a>
+    <header class="header">
+        <div class="logo-and-links">
+            <div class="spacer-left"></div> 
+            <h1 class="logo">COOL DRIPS</h1>
+            <div class="header-action-links">
+                <a href="help.html" class="action-link">Help</a>
+                <a href="sign-in.html" class="action-link">Sign-in</a>
             </div>
-        <h1>Men Shoes</h1>
+        </div>
+            <div class="header-action-links-right">
+              <input type="text" placeholder="Search..">
+              <a href="Favourite.html">Favourite</a>
+              <a href="cart.html">Cart</a>
+            </div>  
+        </div>
     </header>
 
     <!-- navigation -->
     <nav>
+      <div class="topnav">
         <a href="index.html">Home</a>
         <a href="men.html">Men</a>
         <a href="women.html">Women</a>
         <a href="inspo.html">Outfit Inspiration</a>
-
-        <div class=user-actions>
-            <input type="text" placeholder="Search..">
-            <a href="Favourite.html">Favourate</a>
-            <a href="cart.html">Cart</a>
-        </div>
+       </div>
     </nav>
 
     <!--Main Content-->
     <main>
-        <section>
-            <h2 class=section-title>Sneakers</h2>
-            <div class="product">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
+        <h2 class=section-title>Sneakers</h2>
+            <div class=product-grid id=shop>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Air jordan5 Retro 3.jpg"=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
+                    <div class=product-info>
+                    <p>Nike Air jordan5</p>
+                    <p class=price>$200.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
             </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Nike Airforce 1.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Nike Airforce 1</p>
+                    <p class=price>$110.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Air jordan SB.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Nike Jordan Retro SB</p>
+                    <p class=price>$125.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Black Air Jordan 1 High.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Black Air Jordan 1 High</p>
+                    <p class=price>$150.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=product-grid id=shop>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Adidas Campus.jpg"=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
+                    <div class=product-info>
+                    <p>Adidas Campus</p>
+                    <p class=price>$90.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Air jordan5 Retro 2.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Yellow Air Jordan Retro 4</p>
+                    <p class=price>$110.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Grey Air jordan Retro 4.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Grey Air Jordan Retro 4</p>
+                    <p class=price>$110.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Brown Air jordan 1 high.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p></p>
+                    <p class=price>$150.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=product-grid id=shop>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Nike Air Retro 1.jpg"=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
+                    <div class=product-info>
+                    <p>White Nike Retro 1</p>
+                    <p class=price>$200.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Adidas Bad Bunny.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Adidas Bad Bunny</p>
+                    <p class=price>$150.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Green Air jordan 1 high.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Green Air jordan 1 high</p>
+                    <p class=price>$150.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/DC Court Graffik.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>DC Court Graffik</p>
+                    <p class=price>$60.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+                        <div class=product-grid id=shop>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Adidas Superstar 1.jpg"=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
+                    <div class=product-info>
+                    <p>Black Adidas Superstar</p>
+                    <p class=price>$200.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Adidas 1.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>White Adidas Superstar</p>
+                    <p class=price>$110.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Nike Air Jordan 13 Retro.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Nike Air Jordan 13 Retro</p>
+                    <p class=price>$300.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Puma Caven 2.0.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Puma Caven 2.0</p>
+                    <p class=price>$42.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <h2 class=section-title>Formal Shoes</h2>
+            <div class=product-grid id=shop>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Edward dress shoes.jpg"=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
+                    <div class=product-info>
+                    <p>Edward dress shoes</p>
+                    <p class=price>$47.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Jonathan D 1.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Jonathan D</p>
+                    <p class=price>$39.99</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/British Style.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>British Style Dress shoes</p>
+                    <p class=price>$20.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Antonio Cerrelli.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Antonio Cerrelli</p>
+                    <p class=price>$78.99</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=product-grid id=shop>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Zara Chunky Penny Loafers.jpg"=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
+                    <div class=product-info>
+                    <p>Zara Chunky Penny Loafers</p>
+                    <p class=price>$60.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Versace Loafers.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Versace Loafers</p>
+                    <p class=price>$55.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Qawameen shoes.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Qawameen shoes</p>
+                    <p class=price>$64.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/OneDrop Velvet loafers.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>OneDrop Velvet loafers</p>
+                    <p class=price>$150.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=product-grid id=shop>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Christian Louboutin shoes.jpg"=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
+                    <div class=product-info>
+                    <p>Christian Louboutin</p>
+                    <p class=price>$210.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Chunkyderby shoes.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Nike Airforce 1</p>
+                    <p class=price>$110.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Blue loafers Louis Vuitton.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Blue Louis Vuitton loafers</p>
+                    <p class=price>$75.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Fendi Fendigraphy loafers.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Fendi Fendigraphy loafers</p>
+                    <p class=price>$32.99</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class=section-title>Boots</h2>
+            <div class=product-grid id=shop>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Chunky Chelsea boots.jpg"=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
+                    <div class=product-info>
+                    <p>Black chunky Chelsea boots</p>
+                    <p class=price>$56.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Black Timber lands.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Black Timber lands</p>
+                    <p class=price>$150.99</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Brown chunky boots.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Brown chunky boots</p>
+                    <p class=price>$67.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Timber Land 1.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Brown Timber lands</p>
+                    <p class=price>$78.99</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=product-grid id=shop>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Lace-up Front combat boots.jpg"=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
+                    <div class=product-info>
+                    <p>White Lace-up Front combat boots</p>
+                    <p class=price>$33.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Rick Owens FW14 Plinth Hiking.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Rick Owens FW14 Plinth Hiking</p>
+                    <p class=price>$52.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Tictica Combat boots.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Brown Tictica Combat boots</p>
+                    <p class=price>$32.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Black Chuncky Boots.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Black Chuncky Boots</p>
+                    <p class=price>$67.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=product-grid id=shop>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Timber land 02.jpg"=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
+                    <div class=product-info>
+                    <p>White Timber lands</p>
+                    <p class=price>$78.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Chunkyderby shoes.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Nike Airforce 1</p>
+                    <p class=price>$110.00</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Waist Elegant Halter Midi Dress.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Midi Dress</p>
+                    <p class=price>$20.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Users/PH/Downloads/Black Timber lands.jpg"=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
+                    <div class=product-info>
+                    <p>Black Timber Land</p>
+                    <p class=price>$150.00</p>
+                    <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+           
 
             <h2 class=section-title> Dress Boots</h2>
             <div class="product">
