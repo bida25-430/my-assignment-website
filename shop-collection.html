@@ -1,279 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-         <meta charset="UTF-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Shop Collection</title>
+        <link rel="stylesheet" href="style.css">
 
-        <style>
-          /*Reset default browser spacing */
-body {
-    margin: 0;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-}
-
-/* header container */
-.header {
-   
-    Padding: 10px 0; 
-    Border-bottom: 1px solid #ddd; 
-}
-
-.logo-and-links {
-    Display: flex;
-    Justify-content: center; 
-    Align-items: center;     
-    Max-width: 1200px;       
-    Margin: 0 auto;          
-    Padding: 0 40px;        
-}
-
-.logo {
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.spacer-left {
-    Flex: 1;
-}
-
-.header-action-links {
-    Display: flex;
-    Gap: 10px; 
-    Margin-left: auto; 
-    Flex: 1; 
-    Justify-content: flex-end;
-    margin-right: -150px;
-}
-
-.action-link {
-    Text-decoration: none; 
-    Color: #000000;          
-    Font-size: 16px;
-    Font-weight: 700;
-}
-
-.action-link:hover {
-    Color: #555;
-}
-
-.header-action-links-right {
-  text-align: right;
-}
-
-.header-action-links-right a{
-  text-decoration: none;
-  color: #000000;
-  margin-right: 10px;
-}
-
-.header-action-links-right input[type=text] {
-  padding: 6px; 
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
-  margin-left: 80px;  
-}
-
-@media screen and (max-width: 600px) {
-  .header-action-links-right, .header-action-links-right input[type=text] {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-
-  }
-  .header-action-links-right input[type=text] {
-    border: 1px solid #ccc;
-  }
-}
-
-/* Navigation */
-.topnav {
-  overflow: hidden;
-  background-color: #e9e9e9;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #e9e9e9;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.sidenav {
-  height: 60%; /* Full-height: remove this if you want "auto" height */
-  width: 160px; /* Set the width of the sidebar */
-  left: 0;
-  background-color: #ffffff; 
-  overflow-x: hidden; 
-  padding-top: 20px;
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #000000;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-
-
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-
-/*  Page content */
-.main {
-  margin-left: 160px; 
-  padding: 0px 100px;
-}
-
-/* SLIDESHOW STYLES */
-.slideshow-container {
-  Max-width: 60%;
-  Position: relative;
-  Margin: auto;
-  Overflow: hidden;
-  Height: 500px; 
-  margin-left: 160px;
-}
-
-.mySlides { display: none; height: 100%; }
-.mySlides img { object-fit: cover; height: 100%; }
-
-/* Next & prev buttons */
-.prev, .next {
-  Cursor: pointer;
-  Position: absolute;
-  Top: 50%;
-  Width: auto;
-  Margin-top: -22px;
-  Padding: 16px;
-  Color: white;
-  Font-weight: bold;
-  Font-size: 18px;
-  Transition: 0.6s ease;
-  Border-radius: 0 3px 3px 0;
-  User-select: none;
-  Background-color: rgba(0,0,0,0.3);
-}
-.next { right: 0; border-radius: 3px 0 0 3px; }
-.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
-
-/* Caption text */
-.text {
-  Color: #f2f2f2;
-  Font-size: 2rem;
-  Font-weight: bold;
-  Padding: 8px 12px;
-  Position: absolute;
-  Bottom: 50px;
-  Width: 100%;
-  Text-align: center;
-  Text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-}
-
-/* The dots */
-.dot {
-  Cursor: pointer;
-  Height: 12px;
-  Width: 12px;
-  Margin: 0 5px;
-  Background-color: #bbb;
-  Border-radius: 50%;
-  Display: inline-block;
-  Transition: background-color 0.6s ease;
-}
-.active, .dot:hover { background-color: #1a1a1a; }
-
-.fade {
-  Animation-name: fade;
-  Animation-duration: 1.5s;
-}
-@keyframes fade {
-  From {opacity: .4}
-  To {opacity: 1}
-}
-
-/* Product Grid */
-        .section-title { padding: 50px 5% 20px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; }
-        .product-grid {
-            Display: grid;
-            Grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            Gap: 20px;
-            Padding: 0 5% 50px;
-        }
-        .card { border: 1px solid #eee; padding-bottom: 15px; transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .product-img { width: 100%; height: 350px; background: #eee; object-fit: cover; }
-        .product-info { padding: 15px; text-align: center; }
-        .price { color: #888; margin-top: 5px; }
-        .card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.card button:hover {
-  opacity: 0.5;
-}
-
-
-/* Footer */
-footer { 
-   background: #000000; 
-   color: white; 
-   padding: 5px; 
-   text-align: center; 
-   bottom: 0;
-   
-}
-
-
-      </style>
 </head>
 <body>
 
@@ -289,8 +21,7 @@ footer {
         </div>
             <div class="header-action-links-right">
               <input type="text" placeholder="Search..">
-              <a href="Favourite.html">Favourite</a>
-              <a href="cart.html">Cart</a>
+              <a href="cart.html" class="cart-link">🛒 <span id="cart-count">0</span></a>
             </div>  
         </div>
     </header>
@@ -304,171 +35,391 @@ footer {
         <a href="inspo.html">Outfit Inspiration</a>
        </div>
 
-    <!-- Side navigation -->
-      <div class="sidenav">
-        <a href="#shoes">Shoes</a>
-        <a href="#accessories">Accessories</a>
-        <a href="#jeans">Jeans</a>
-        <a href="#hoodies">Hoodies</a>
-      </div>
-    </nav>
-
     <!--Page Content-->
     <main>
-      <div class="main">
 
-        <h2>Trending</h2>
-
+        <!--  SLIDE SHOW -->
         <div class="slideshow-container">
 
-          <div class="mySlides fade">
-            <img src="Formal.jpg"=format&fit=crop&w=1500&q=80 style="width:100%">
-            <div class="text">MENS LATEST DRIP</div>
-          </div>
-
-          <div class="mySlides fade">
-            <img src=https://images.unsplash.com/photo-1552874869-5c39ec9288dc?auto=format&fit=crop&w=1500&q=80 style="width:80%">
-            <div class="text">WOMENS SEASONAL STEALS</div>
-          </div>
-
-          <div class="mySlides fade">
-            <img src=https://images.unsplash.com/photo-1519457431-7571f0181146?auto=format&fit=crop&w=1500&q=80 style="width:80%">
-            <div class="text">KIDS STREETWEAR CLASSICS</div>
-          </div>
-          <div class="mySlides fade">
-            <img src="Streetwear.jpg"=format&fit=crop&w=1500&q=80 style="width:80%">
-            <div class="text"></div>
-          </div>
-          <div class="mySlides fade">
-            <img src=https://images.unsplash.com/photo-1552874869-5c39ec9288dc?auto=format&fit=crop&w=1500&q=80 style="width:80%">
-            <div class="text">WOMENS SEASONAL STEALS</div>
-          </div>
-            
-
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          </div>
-
-        <br>
-
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-          <span class="dot" onclick="currentSlide(5)"></span>
-        </div>
-      </div>
-
-      <h3 class=section-title>New Arrivals</h3>
-        <div class=product-grid id=shop>
-          <div class="card">
-            <img src=https://images.unsplash.com/photo-1554568218-0f1715e72254?auto=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
-              <div class=product-info>
-                <p>Oversized Graphic Tee</p>
-                <p class=price>$30.00</p>
-                <p><button>Add to Cart</button></p>
-              </div>
-          </div>
-          <div class="card">
-              <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
-              <div class=product-info>
-              <p>Essential Hoodie  Black</p>
-              <p class=price>$40.00</p>
-              <p><button>Add to Cart</button></p>
+            <div class="slide active">
+                <img src="Images/Tesla Hertz Skate1.jpg">
+                <div class="text">Tesla Hertz Skate</div>
             </div>
-          </div>
-          <div class="card">
-            <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
-            <div class=product-info>
-              <p>Essential Hoodie  Black</p>
-              <p class=price>$40.00</p>
-              <p><button>Add to Cart</button></p>
+
+            <div class="slide">
+                <img src="Images/Air jordan5 Retro 2.jpg">
+                <div class="text">Yellow Nike jordan Retro 5</div>
             </div>
-          </div>
-          <div class="card">
-            <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
-            <div class=product-info>
-              <p>Essential Hoodie  Black</p>
-              <p class=price>$40.00</p>
-              <p><button>Add to Cart</button></p>
+
+            <div class="slide">
+                <img src="Images/Stitching loose fit straight leg jean1.jpg">
+                <div class="text">Stitching loose fit straight leg jean</div>
             </div>
-          </div>
-          <div class="card">
-            <img src=https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=500&q=60 alt=Shorts class=product-img>
-              <div class=product-info>
-                <p>Cargo Mesh Shorts</p>
-                <p class=price>$25.00</p>
-                <p><button>Add to Cart</button></p>
-              </div>
+
+            <div class="slide">
+                <img src="Images/63 crop top.jpg">
+                <div class="text">63 crop top</div>
             </div>
-          </div>
+
+            <div class="slide">
+                <img src="Images/Adidas Bad Bunny.jpg">
+                <div class="text">Adidas Bad Bunny</div>
+            </div>
+
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
         </div>
 
-        <h4 class=section-title>Jeans</h4>
-            <div class=product-grid id=shop>
-                <div class="card">
-                    <img src=https://images.unsplash.com/photo-1554568218-0f1715e72254?auto=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
-                    <div class=product-info>
-                    <p>Oversized Graphic Tee</p>
-                    <p class=price>$30.00</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
+        <!--  LAYOUT -->
+        <div class="shop-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>Filter</h3>
+            <button onclick="filterProducts('all')">All</button>
+            <button onclick="filterProducts('shoes')">Shoes</button>
+            <button onclick="filterProducts('jeans')">Jeans</button>
+            <button onclick="filterProducts('accessories')">Accessories</button>
+            <button onclick="filterProducts('hoodies')">Hoodies</button>
+            <button onclick="filterProducts('tees')">Tees</button>
+            <button onclick="filterProducts('dresses')">Dresses</button>
+        </aside>
+
+        <!-- PRODUCTS -->
+        <section class="products" id="products">
+
+            <div class="card shoes">
+                <img src="Images/Air jordan3.jpg">
+                <p> Red and white Nike Air jordan3</p>
+                <p>$120.00</p>
+                <button class="add-to-cart" data-name="Red and white Nike Air jordan3" data-price="120" data-image="Images/Air jordan3.jpg">Add to Cart</button>
             </div>
-                <div class="card">
-                    <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
-                    <div class=product-info>
-                    <p>Essential Hoodie  Black</p>
-                    <p class=price>$40.00</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
+            <div class="card shoes">
+                <img src="Images/Air jordan SB.jpg">
+                <p> Nike Air jordan SB</p>
+                <p>$125.25</p>
+                <button class="add-to-cart" data-name="Nike Air jordan SB" data-price="125" data-image="Images/Air jordan SB.jpg">Add to Cart</button>
             </div>
-                <div class="card">
-                    <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
-                    <div class=product-info>
-                    <p>Essential Hoodie  Black</p>
-                    <p class=price>$40.00</p>
-                    <p><button>Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
-                    <div class=product-info>
-                        <p>Essential Hoodie  Black</p>
-                        <p class=price>$40.00</p>
-                        <p><button>Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src=https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=500&q=60 alt=Shorts class=product-img>
-                    <div class=product-info>
-                    <p>Cargo Mesh Shorts</p>
-                    <p class=price>$25.00</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
-            </div>   
-          </div>    
-        </div>
-      </div>  
-    </main>
+            <div class="card shoes">
+                <img src="Images/Adidas Superstar 1.jpg">
+                <p> Adidas Superstar</p>
+                <p>$100.00</p>
+                <button class="add-to-cart" data-name="Adidas Superstar" data-price="100" data-image="Images/Adidas Superstar 1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Nike Air 1.jpg">
+                <p> Black Nike Air Retro 1</p>
+                <p>$70.99</p>
+                <button class="add-to-cart" data-name="Black Nike Air Retro 1" data-price="70" data-image="Images/Nike Air 1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Nike Air Jordan 13 Retro.jpg">
+                <p> Nike Air Jordan Retro 13</p>
+                <p>$300.00</p>
+                <button class="add-to-cart" data-name="Nike Air Jordan Retro 13" data-price="300" data-image="Images/Nike Air Jordan 13 Retro.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Nike Airforce 1.jpg">
+                <p>white Nike Airforce 1</p>
+                <p>$90.00</p>
+                <button class="add-to-cart" data-name="white Nike Airforce 1" data-price="90" data-image="Images/Nike Airforce 1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Blue Nike Airforce 1.jpg">
+                <p> White & Blue Nike Airforce 1</p>
+                <p>$90.00</p>
+                <button class="add-to-cart" data-name="White & Blue Nike Airforce 1" data-price="90" data-image="Images/Blue Nike Airforce 1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Air jordan5 Retro 2.jpg">
+                <p> Yellow Nike Jordan Retro 4</p>
+                <p>$125.00</p>
+                <button class="add-to-cart" data-name="Yellow Nike Jordan Retro 4" data-price="120" data-image="Images/Air jordan5 Retro 2.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Air jordan5 Retro 3.jpg">
+                <p> Red Nike Jordan Retro 4</p>
+                <p>$125</p>
+                <button class="add-to-cart" data-name="Red Nike Jordan Retro 4" data-price="125" data-image="Images/Air jordan5 Retro 3.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Jonathan D 1.jpg">
+                <p> Jonathan D </p>
+                <p>$43.00</p>
+                <button class="add-to-cart" data-name="Red and white Nike Air jordan3" data-price="120" data-image="Images/Jonathan D 1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Timber Land 1.jpg">
+                <p> Brown Timberland</p>
+                <p>$150.00</p>
+                <button class="add-to-cart" data-name="Brown Timberland" data-price="150.00" data-image="Images/Timber Land 1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/DC Court Graffik.jpg">
+                <p> DC Court Graffik</p>
+                <p>$43.00</p>
+                <button class="add-to-cart" data-name="Red and white Nike Air jordan3" data-price="43.00" data-image="Images/DC Court Graffik.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Puma Suede.jpg">
+                <p>Red Puma Suede</p>
+                <p>$50.00</p>
+                <button class="add-to-cart" data-name="Red Puma Suede" data-price="50.00" data-image="Images/Puma Suede.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Brown Air jordan 1 high.jpg">
+                <p> Brown Air jordan 1 high</p>
+                <p>$80.00</p>
+                <button class="add-to-cart" data-name="Brown Air jordan 1 high" data-price="80.00" data-image="Images/Brown Air jordan 1 high.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Green Air jordan 1 high.jpg">
+                <p> Green Air jordan 1 high</p>
+                <p>$80.00</p>
+                <button class="add-to-cart" data-name="Green Air jordan 1 high" data-price="80.00" data-image="Images/Green Air jordan 1 high.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Black Air Jordan 1 High.jpg">
+                <p> Black Air Jordan 1 High</p>
+                <p>$80.00</p>
+                <button class="add-to-cart" data-name="Black Air Jordan 1 High" data-price="80.00" data-image="Images/Black Air Jordan 1 High.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Grey Air jordan Retro 4.jpg">
+                <p> Grey Air jordan Retro 4</p>
+                <p>$125.00</p>
+                <button class="add-to-cart" data-name="Grey Air jordan Retro 4" data-price="125.00" data-image="Images/Grey Air jordan Retro 4.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Nike Air Retro 1.1.jpg">
+                <p> Red and white Nike Air Retro 1</p>
+                <p>$70.99</p>
+                <button class="add-to-cart" data-name="Red and white Nike Air Retro 1" data-price="70.99" data-image="Images/Nike Air Retro 1.1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Adidas Campus.jpg">
+                <p> Adidas Campus</p>
+                <p>$100.00</p>
+                <button class="add-to-cart" data-name="Adidas Campus" data-price="100.00" data-image="Images/Adidas Campus.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Puma Rebound layup.jpg">
+                <p> Puma Rebound layup</p>
+                <p>$58.00</p>
+                <button class="add-to-cart" data-name="Puma Rebound layup" data-price="58.00" data-image="Images/Puma Rebound layup.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Puma Caven 2.0.jpg">
+                <p> Puma Caven 2.0</p>
+                <p>$55.00</p>
+                <button class="add-to-cart" data-name="Puma Caven 2.0" data-price="55.00" data-image="Images/Puma Caven 2.0.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/OneDrop Velvet loafers.jpg">
+                <p> OneDrop Velvet loafers</p>
+                <p>$33.00</p>
+                <button class="add-to-cart" data-name="OneDrop Velvet loafers" data-price="33.00" data-image="Images/OneDrop Velvet loafers.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Qawameen shoes.jpg">
+                <p> Qawameen shoes</p>
+                <p>$29.99</p>
+                <button class="add-to-cart" data-name="Qawameen shoes" data-price="29.99" data-image="Images/Qawameen shoes.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Velvet loafers.jpg">
+                <p> Velvet loafers</p>
+                <p>$45.00</p>
+                <button class="add-to-cart" data-name="Velvet loafers" data-price="45.00" data-image="Images/Velvet loafers.jpg">Add to Cart</button>
+            </div>
 
-    <script>
-let slideIndex = 5;
-showSlides();
+            <div class="card jeans">
+                <img src="images/jeans1.jpg">
+                <p>Baggy Jeans</p>
+                <p>$60.00</p>
+                <button class="add-to-cart" data-name="Baggy Jeans" data-price="60.00" data-image="images/jeans1.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="images/jeans1.jpg">
+                <p>Baggy Jeans</p>
+                <p>$60.00</p>
+                <button class="add-to-cart" data-name="Baggy Jeans" data-price="60.00" data-image="images/jeans1.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="images/jeans1.jpg">
+                <p>Baggy Jeans</p>
+                <p>$60</p>
+                <button class="add-to-cart" data-name="Baggy Jeans" data-price="60" data-image="images/jeans1.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="images/jeans1.jpg">
+                <p>Baggy Jeans</p>
+                <p>$60</p>
+                <button class="add-to-cart" data-name="Baggy Jeans" data-price="60" data-image="images/jeans1.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="images/jeans1.jpg">
+                <p>Baggy Jeans</p>
+                <p>$60</p>
+                <button class="add-to-cart" data-name="Baggy Jeans" data-price="60" data-image="images/jeans1.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="images/jeans1.jpg">
+                <p>Baggy Jeans</p>
+                <p>$60</p>
+                <button class="add-to-cart" data-name="Baggy Jeans" data-price="60" data-image="images/jeans1.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="images/jeans1.jpg">
+                <p>Baggy Jeans</p>
+                <p>$60</p>
+                <button class="add-to-cart" data-name="Baggy Jeans" data-price="60" data-image="images/jeans1.jpg">Add to Cart</button>
+            </div>
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 10000); // Change image every 5 seconds
-}
-        </script>
+            <div class="card hoodies">
+                <img src="images/hoodie1.jpg">
+                <p>Hoodie</p>
+                <p>$45</p>
+                <button class="add-to-cart" data-name="Hoodie" data-price="45" data-image="images/hoodie1.jpg">Add to Cart</button>
+            </div>
 
+            <div class="card accessories">
+                <img src="images/sunglasses.jpg">
+                <p>Sunglasses</p>
+                <p>$15</p>
+                <button class="add-to-cart" data-name="Sunglasses" data-price="15" data-image="images/sunglasses.jpg">Add to Cart</button>
+            </div>
+
+            <div class="card tees">
+                <img src="images/tee.jpg">
+                <p>Graphic Tee</p>
+                <p>$25</p>
+                <button class="add-to-cart" data-name="Graphic Tee" data-price="25" data-image="images/tee.jpg">Add to Cart</button>
+            </div>
+
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+            <div class="card dresses">
+                <img src="images/dress.jpg">
+                <p>Summer Dress</p>
+                <p>$35</p>
+                <button class="add-to-cart" data-name="Dress" data-price="35" data-image="images/dress.jpg">Add to Cart</button>
+            </div>
+
+        </section>
+    </div>
+
+</main>
+  
+    <script src="index.js"></script>
+    
     <footer>
       <p>&copy; 2026 COOL DRIPS. STAY DRIPPY.</p>
     </footer>

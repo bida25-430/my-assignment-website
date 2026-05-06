@@ -1,278 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Men</title>
-
-        <style>
-          /*Reset default browser spacing */
-body {
-    margin: 0;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-}
-
-/* header container */
-.header {
-   
-    Padding: 10px 0; 
-    Border-bottom: 1px solid #ddd; 
-}
-
-.logo-and-links {
-    Display: flex;
-    Justify-content: center; 
-    Align-items: center;     
-    Max-width: 1200px;       
-    Margin: 0 auto;          
-    Padding: 0 40px;        
-}
-
-.logo {
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.spacer-left {
-    Flex: 1;
-}
-
-.header-action-links {
-    Display: flex;
-    Gap: 10px; 
-    Margin-left: auto; 
-    Flex: 1; 
-    Justify-content: flex-end;
-    margin-right: -150px;
-}
-
-.action-link {
-    Text-decoration: none; 
-    Color: #000000;          
-    Font-size: 16px;
-    Font-weight: 700;
-}
-
-.action-link:hover {
-    Color: #555;
-}
-
-.header-action-links-right {
-  text-align: right;
-}
-
-.header-action-links-right a{
-  text-decoration: none;
-  color: #000000;
-  margin-right: 10px;
-}
-
-.header-action-links-right input[type=text] {
-  padding: 6px; 
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
-  margin-left: 80px;  
-}
-
-@media screen and (max-width: 600px) {
-  .header-action-links-right, .header-action-links-right input[type=text] {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-
-  }
-  .header-action-links-right input[type=text] {
-    border: 1px solid #ccc;
-  }
-}
-
-/* Navigation */
-.topnav {
-  overflow: hidden;
-  background-color: #e9e9e9;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #e9e9e9;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.sidenav {
-  height: 60%; /* Full-height: remove this if you want "auto" height */
-  width: 160px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  left: 0;
-  background-color: #ffffff; 
-  overflow-x: hidden; 
-  padding-top: 20px;
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #000000;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-
-
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-
-/* Style page content */
-.main {
-  margin-left: 160px; 
-  padding: 0px 100px;
-}
-
-/* SLIDESHOW STYLES */
-.slideshow-container {
-  Max-width: 60%;
-  Position: relative;
-  Margin: auto;
-  Overflow: hidden;
-  Height: 500px; 
-  margin-left: 160px;
-}
-
-.mySlides { display: none; height: 100%; }
-.mySlides img { object-fit: cover; height: 100%; }
-
-/* Next & prev buttons */
-.prev, .next {
-  Cursor: pointer;
-  Position: absolute;
-  Top: 50%;
-  Width: auto;
-  Margin-top: -22px;
-  Padding: 16px;
-  Color: white;
-  Font-weight: bold;
-  Font-size: 18px;
-  Transition: 0.6s ease;
-  Border-radius: 0 3px 3px 0;
-  User-select: none;
-  Background-color: rgba(0,0,0,0.3);
-}
-.next { right: 0; border-radius: 3px 0 0 3px; }
-.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
-
-/* Caption text */
-.text {
-  Color: #f2f2f2;
-  Font-size: 2rem;
-  Font-weight: bold;
-  Padding: 8px 12px;
-  Position: absolute;
-  Bottom: 50px;
-  Width: 100%;
-  Text-align: center;
-  Text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-}
-
-/* The dots */
-.dot {
-  Cursor: pointer;
-  Height: 12px;
-  Width: 12px;
-  Margin: 0 5px;
-  Background-color: #bbb;
-  Border-radius: 50%;
-  Display: inline-block;
-  Transition: background-color 0.6s ease;
-}
-.active, .dot:hover { background-color: #1a1a1a; }
-
-.fade {
-  Animation-name: fade;
-  Animation-duration: 1.5s;
-}
-@keyframes fade {
-  From {opacity: .4}
-  To {opacity: 1}
-}
-
-/* Product Grid */
-        .section-title { padding: 50px 5% 20px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; }
-        .product-grid {
-            Display: grid;
-            Grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            Gap: 20px;
-            Padding: 0 5% 50px;
-        }
-        .card { border: 1px solid #eee; padding-bottom: 15px; transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .product-img { width: 100%; height: 350px; background: #eee; object-fit: cover; }
-        .product-info { padding: 15px; text-align: center; }
-        .price { color: #888; margin-top: 5px; }
-        .card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.card button:hover {
-  opacity: 0.5;
-}
-
-/* Footer */
-footer { 
-   background: #000000; 
-   color: white; 
-   padding: 5px; 
-   text-align: center; 
-   bottom: 0;
-   
-}
-
-      </style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Men</title>
+      <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -288,8 +20,7 @@ footer {
         </div>
             <div class="header-action-links-right">
               <input type="text" placeholder="Search..">
-              <a href="Favourite.html">Favourite</a>
-              <a href="cart.html">Cart</a>
+              <a href="cart.html" class="cart-link">🛒 <span id="cart-count">0</span></a>
             </div>  
         </div>
     </header>
@@ -302,173 +33,717 @@ footer {
         <a href="women.html">Women</a>
         <a href="inspo.html">Outfit Inspiration</a>
        </div>
-
-    <!-- Side navigation -->
-      <div class="sidenav">
-        <a href="m-shoes.html">Shoes</a>
-        <a href="m-accessories.html">Accessories</a>
-        <a href="m-jeans.html">Jeans</a>
-        <a href="m-hooodies.html">Hoodies</a>
-        <a href="m-bottoms.html">Bottoms</a>
-        <a href="m-tees.html">Tees</a>
-      </div>
     </nav>
 
-    <!--Page Content-->
+     <!--Page Content-->
     <main>
-      <div class="main">
 
-        <h2>Trending</h2>
-
+        <!--  SLIDE SHOW -->
         <div class="slideshow-container">
 
-          <div class="mySlides fade">
-            <img src="Formal.jpg"=format&fit=crop&w=1500&q=80 style="width:100%">
-            <div class="text">MENS LATEST DRIP</div>
-          </div>
-
-          <div class="mySlides fade">
-            <img src=https://images.unsplash.com/photo-1552874869-5c39ec9288dc?auto=format&fit=crop&w=1500&q=80 style="width:80%">
-            <div class="text">WOMENS SEASONAL STEALS</div>
-          </div>
-
-          <div class="mySlides fade">
-            <img src=https://images.unsplash.com/photo-1519457431-7571f0181146?auto=format&fit=crop&w=1500&q=80 style="width:80%">
-            <div class="text">KIDS STREETWEAR CLASSICS</div>
-          </div>
-          <div class="mySlides fade">
-            <img src="Streetwear.jpg"=format&fit=crop&w=1500&q=80 style="width:80%">
-            <div class="text"></div>
-          </div>
-          <div class="mySlides fade">
-            <img src=https://images.unsplash.com/photo-1552874869-5c39ec9288dc?auto=format&fit=crop&w=1500&q=80 style="width:80%">
-            <div class="text">WOMENS SEASONAL STEALS</div>
-          </div>
-            
-
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          </div>
-
-        <br>
-
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-          <span class="dot" onclick="currentSlide(5)"></span>
-        </div>
-      </div>
-
-      <h3 class=section-title>New Arrivals</h3>
-        <div class=product-grid id=shop>
-          <div class="card">
-            <img src=https://images.unsplash.com/photo-1554568218-0f1715e72254?auto=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
-              <div class=product-info>
-                <p>Oversized Graphic Tee</p>
-                <p class=price>$30.00</p>
-                <p><button>Add to Cart</button></p>
-              </div>
-          </div>
-          <div class="card">
-              <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
-              <div class=product-info>
-              <p>Essential Hoodie  Black</p>
-              <p class=price>$40.00</p>
-              <p><button>Add to Cart</button></p>
+            <div class="slide active">
+                <img src="Images/Tesla Hertz Skate1.jpg">
+                <div class="text">Tesla Hertz Skate</div>
             </div>
-          </div>
-          <div class="card">
-            <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
-            <div class=product-info>
-              <p>Essential Hoodie  Black</p>
-              <p class=price>$40.00</p>
-              <p><button>Add to Cart</button></p>
+
+            <div class="slide">
+                <img src="Images/Air jordan5 Retro 2.jpg">
+                <div class="text">Yellow Nike jordan Retro 5</div>
             </div>
-          </div>
-          <div class="card">
-            <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
-            <div class=product-info>
-              <p>Essential Hoodie  Black</p>
-              <p class=price>$40.00</p>
-              <p><button>Add to Cart</button></p>
+
+            <div class="slide">
+                <img src="Images/Stitching loose fit straight leg jean1.jpg">
+                <div class="text">Stitching loose fit straight leg jean</div>
             </div>
-          </div>
-          <div class="card">
-            <img src=https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=500&q=60 alt=Shorts class=product-img>
-              <div class=product-info>
-                <p>Cargo Mesh Shorts</p>
-                <p class=price>$25.00</p>
-                <p><button>Add to Cart</button></p>
-              </div>
+
+            <div class="slide">
+                <img src="Images/63 crop top.jpg">
+                <div class="text">63 crop top</div>
             </div>
-          </div>
+
+            <div class="slide">
+                <img src="Images/Adidas Bad Bunny.jpg">
+                <div class="text">Adidas Bad Bunny</div>
+            </div>
+
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
         </div>
 
-        <h4 class=section-title>Jeans</h4>
-            <div class=product-grid id=shop>
-                <div class="card">
-                    <img src=https://images.unsplash.com/photo-1554568218-0f1715e72254?auto=format&fit=crop&w=500&q=60 alt=Tee class=product-img>
-                    <div class=product-info>
-                    <p>Oversized Graphic Tee</p>
-                    <p class=price>$30.00</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
+        <!--  LAYOUT -->
+        <div class="shop-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>Filter</h3>
+            <button onclick="filterProducts('all')">All</button>
+            <button onclick="filterProducts('shoes')">Shoes</button>
+            <button onclick="filterProducts('jeans')">Jeans</button>
+            <button onclick="filterProducts('accessories')">Accessories</button>
+            <button onclick="filterProducts('hoodies')">Hoodies</button>
+            <button onclick="filterProducts('tees')">Tees</button>
+            <button onclick="filterProducts('shirts')">Shirts</button>
+            <button onclick="filterProducts('jackets')">Jackets</button>
+            <button onclick="filterProducts('bottoms')">Bottoms</button>
+        </aside>
+
+            <!-- PRODUCTS -->
+        <section class="products" id="products">
+
+            <div class="card shoes">
+                <img src="Images/Air jordan3.jpg">
+                <p> Red and white Nike Air jordan3</p>
+                <p>$120.00</p>
+                <button class="add-to-cart" data-name="Red and white Nike Air jordan3" data-price="120" data-image="Images/Air jordan3.jpg">Add to Cart</button>
             </div>
-                <div class="card">
-                    <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
-                    <div class=product-info>
-                    <p>Essential Hoodie  Black</p>
-                    <p class=price>$40.00</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
+            <div class="card shoes">
+                <img src="Images/Air jordan SB.jpg">
+                <p> Nike Air jordan SB</p>
+                <p>$125.25</p>
+                <button class="add-to-cart" data-name="Nike Air jordan SB" data-price="125" data-image="Images/Air jordan SB.jpg">Add to Cart</button>
             </div>
-                <div class="card">
-                    <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
-                    <div class=product-info>
-                    <p>Essential Hoodie  Black</p>
-                    <p class=price>$40.00</p>
-                    <p><button>Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src=https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=500&q=60 alt=Hoodie class=product-img>
-                    <div class=product-info>
-                        <p>Essential Hoodie  Black</p>
-                        <p class=price>$40.00</p>
-                        <p><button>Add to Cart</button></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src=https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=500&q=60 alt=Shorts class=product-img>
-                    <div class=product-info>
-                    <p>Cargo Mesh Shorts</p>
-                    <p class=price>$25.00</p>
-                    <p><button>Add to Cart</button></p>
-                </div>
-            </div>   
-          </div>    
-        </div>
-      </div>  
+            <div class="card shoes">
+                <img src="Images/Adidas Superstar 1.jpg">
+                <p> Adidas Superstar</p>
+                <p>$100.00</p>
+                <button class="add-to-cart" data-name="Adidas Superstar" data-price="100" data-image="Images/Adidas Superstar 1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Nike Air 1.jpg">
+                <p> Black Nike Air Retro 1</p>
+                <p>$70.99</p>
+                <button class="add-to-cart" data-name="Black Nike Air Retro 1" data-price="70" data-image="Images/Nike Air 1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Nike Air Jordan 13 Retro.jpg">
+                <p> Nike Air Jordan Retro 13</p>
+                <p>$300.00</p>
+                <button class="add-to-cart" data-name="Nike Air Jordan Retro 13" data-price="300" data-image="Images/Nike Air Jordan 13 Retro.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Nike Airforce 1.jpg">
+                <p>white Nike Airforce 1</p>
+                <p>$90.00</p>
+                <button class="add-to-cart" data-name="white Nike Airforce 1" data-price="90" data-image="Images/Nike Airforce 1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Blue Nike Airforce 1.jpg">
+                <p> White & Blue Nike Airforce 1</p>
+                <p>$90.00</p>
+                <button class="add-to-cart" data-name="White & Blue Nike Airforce 1" data-price="90" data-image="Images/Blue Nike Airforce 1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Air jordan5 Retro 2.jpg">
+                <p> Yellow Nike Jordan Retro 4</p>
+                <p>$125.00</p>
+                <button class="add-to-cart" data-name="Yellow Nike Jordan Retro 4" data-price="120" data-image="Images/Air jordan5 Retro 2.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Air jordan5 Retro 3.jpg">
+                <p> Red Nike Jordan Retro 4</p>
+                <p>$125</p>
+                <button class="add-to-cart" data-name="Red Nike Jordan Retro 4" data-price="125" data-image="Images/Air jordan5 Retro 3.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Jonathan D 1.jpg">
+                <p> Jonathan D </p>
+                <p>$43.00</p>
+                <button class="add-to-cart" data-name="Red and white Nike Air jordan3" data-price="120" data-image="Images/Jonathan D 1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Timber Land 1.jpg">
+                <p> Brown Timberland</p>
+                <p>$150.00</p>
+                <button class="add-to-cart" data-name="Brown Timberland" data-price="150.00" data-image="Images/Timber Land 1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/DC Court Graffik.jpg">
+                <p> DC Court Graffik</p>
+                <p>$43.00</p>
+                <button class="add-to-cart" data-name="Red and white Nike Air jordan3" data-price="43.00" data-image="Images/DC Court Graffik.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Puma Suede.jpg">
+                <p>Red Puma Suede</p>
+                <p>$50.00</p>
+                <button class="add-to-cart" data-name="Red Puma Suede" data-price="50.00" data-image="Images/Puma Suede.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Brown Air jordan 1 high.jpg">
+                <p> Brown Air jordan 1 high</p>
+                <p>$80.00</p>
+                <button class="add-to-cart" data-name="Brown Air jordan 1 high" data-price="80.00" data-image="Images/Brown Air jordan 1 high.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Green Air jordan 1 high.jpg">
+                <p> Green Air jordan 1 high</p>
+                <p>$80.00</p>
+                <button class="add-to-cart" data-name="Green Air jordan 1 high" data-price="80.00" data-image="Images/Green Air jordan 1 high.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Black Air Jordan 1 High.jpg">
+                <p> Black Air Jordan 1 High</p>
+                <p>$80.00</p>
+                <button class="add-to-cart" data-name="Black Air Jordan 1 High" data-price="80.00" data-image="Images/Black Air Jordan 1 High.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Grey Air jordan Retro 4.jpg">
+                <p> Grey Air jordan Retro 4</p>
+                <p>$125.00</p>
+                <button class="add-to-cart" data-name="Grey Air jordan Retro 4" data-price="125.00" data-image="Images/Grey Air jordan Retro 4.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Nike Air Retro 1.1.jpg">
+                <p> Red and white Nike Air Retro 1</p>
+                <p>$70.99</p>
+                <button class="add-to-cart" data-name="Red and white Nike Air Retro 1" data-price="70.99" data-image="Images/Nike Air Retro 1.1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Adidas Campus.jpg">
+                <p> Adidas Campus</p>
+                <p>$100.00</p>
+                <button class="add-to-cart" data-name="Adidas Campus" data-price="100.00" data-image="Images/Adidas Campus.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Puma Rebound layup.jpg">
+                <p> Puma Rebound layup</p>
+                <p>$58.00</p>
+                <button class="add-to-cart" data-name="Puma Rebound layup" data-price="58.00" data-image="Images/Puma Rebound layup.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Puma Caven 2.0.jpg">
+                <p> Puma Caven 2.0</p>
+                <p>$55.00</p>
+                <button class="add-to-cart" data-name="Puma Caven 2.0" data-price="55.00" data-image="Images/Puma Caven 2.0.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/OneDrop Velvet loafers.jpg">
+                <p> OneDrop Velvet loafers</p>
+                <p>$33.00</p>
+                <button class="add-to-cart" data-name="OneDrop Velvet loafers" data-price="33.00" data-image="Images/OneDrop Velvet loafers.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Qawameen shoes.jpg">
+                <p> Qawameen shoes</p>
+                <p>$29.99</p>
+                <button class="add-to-cart" data-name="Qawameen shoes" data-price="29.99" data-image="Images/Qawameen shoes.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Velvet loafers.jpg">
+                <p> Velvet loafers</p>
+                <p>$45.00</p>
+                <button class="add-to-cart" data-name="Velvet loafers" data-price="45.00" data-image="Images/Velvet loafers.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Tesla Hertz Skate1.jpg">
+                <p> Tesla Hertz Skate</p>
+                <p>$100.00</p>
+                <button class="add-to-cart" data-name="Tesla Hertz Skate" data-price="100.00" data-image="Images/Tesla Hertz Skate1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Fendi Fendigraphy loafers.jpg">
+                <p> Fendi Fendigraphy loafers</p>
+                <p>$45.00</p>
+                <button class="add-to-cart" data-name="Fendi Fendigraphy loafers" data-price="45.00" data-image="Images/Fendi Fendigraphy loafers.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Blue loafers Louis Vuitton.jpg">
+                <p> Blue Louis Vuitton loafers</p>
+                <p>$90.00</p>
+                <button class="add-to-cart" data-name="Blue Louis Vuitton loafers " data-price="90.00" data-image="Images/Blue loafers Louis Vuitton.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Black sparkle loafers.jpg">
+                <p> Black sparkle loafers</p>
+                <p>$38.00</p>
+                <button class="add-to-cart" data-name="Black sparkle loafers" data-price="38.00" data-image="Images/Black sparkle loafers.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Chunkyderby shoes.jpg">
+                <p> Chunkyderby shoes</p>
+                <p>$33.00</p>
+                <button class="add-to-cart" data-name="Chunkyderby shoes" data-price="33.00" data-image="Images/Chunkyderby shoes.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Christian Louboutin shoes.jpg">
+                <p> Christian Louboutin shoes</p>
+                <p>$64.00</p>
+                <button class="add-to-cart" data-name="Christian Louboutin shoes" data-price="64.00" data-image="Images/Christian Louboutin shoes.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Zara Chunky Penny Loafers.jpg">
+                <p>Zara Chunky Penny Loafers</p>
+                <p>$49.99</p>
+                <button class="add-to-cart" data-name="Zara Chunky Penny Loafers" data-price="49.99" data-image="Images/Zara Chunky Penny Loafers.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Rick Owens FW14 Plinth Hiking.jpg">
+                <p> Rick Owens FW14 Plinth Hiking</p>
+                <p>$74.00</p>
+                <button class="add-to-cart" data-name="Rick Owens FW14 Plinth Hiking" data-price="74.00" data-image="Images/Rick Owens FW14 Plinth Hiking.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Air jordan5 Retro.jpg">
+                <p> Black Air jordan Retro 4</p>
+                <p>$45.00</p>
+                <button class="add-to-cart" data-name="Black Air jordan Retro 4" data-price="45.00" data-image="Images/Air jordan5 Retro.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Black Timber lands.jpg">
+                <p> Black Timberlands</p>
+                <p>$150.00</p>
+                <button class="add-to-cart" data-name="Black Timberlands" data-price="150.00" data-image="Images/Black Timber lands.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Tictica Combat boots.jpg">
+                <p> Tictica Combat boots</p>
+                <p>$55.00</p>
+                <button class="add-to-cart" data-name="Tictica Combat boots" data-price="55.00" data-image="Images/Tictica Combat boots.jpg">Add to Cart</button>
+            </div>
+            <div class="card shoes">
+                <img src="Images/Timber land 02.jpg">
+                <p> White Timberlands</p>
+                <p>$150.00</p>
+                <button class="add-to-cart" data-name="White Timberlands" data-price="150.00" data-image="Images/Timber land 02.jpg">Add to Cart</button>
+            </div>
+
+            <div class="card jeans">
+                <img src="Images/Straight Bermuda denim shorts1.jpg">
+                <p>Black Straight Bermuda denim shorts</p>
+                <p>$19.00</p>
+                <button class="add-to-cart" data-name="Black Straight Bermuda denim shorts" data-price="19.00" data-image="Images/Straight Bermuda denim shorts1.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Straight Bermuda denim shorts2.jpg">
+                <p>Blue Straight Bermuda denim shorts</p>
+                <p>$19.00</p>
+                <button class="add-to-cart" data-name="Blue Straight Bermuda denim shorts" data-price="19.00" data-image="Images/Straight Bermuda denim shorts2.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Straight Bermuda denim shorts3.jpg">
+                <p>Straight Bermuda denim shorts</p>
+                <p>$23.00</p>
+                <button class="add-to-cart" data-name="Straight Bermuda denim shorts" data-price="23.00" data-image="Images/Straight Bermuda denim shorts3.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Stitching loose fit straight leg jean1.jpg">
+                <p>Black & grey Stitching loose fit straight leg jean</p>
+                <p>$48.00</p>
+                <button class="add-to-cart" data-name="Black & grey Stitching loose fit straight leg jean" data-price="48.00" data-image="Images/Stitching loose fit straight leg jean1.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Stitching loose fit straight leg jean2.jpg">
+                <p>Blue multi pocket wide led cargo jean</p>
+                <p>$33.00</p>
+                <button class="add-to-cart" data-name="Blue multi pocket wide led cargo jean" data-price="33.00" data-image="Images/Stitching loose fit straight leg jean2.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Multi pocket wide led cargo jean 1.jpg">
+                <p>Grey multi pocket wide led cargo jean</p>
+                <p>$33.00</p>
+                <button class="add-to-cart" data-name="Grey multi pocket wide led cargo jean" data-price="33.00" data-image="Images/Multi pocket wide led cargo jean 1.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Multi pocket wide led cargo jean 3.jpg">
+                <p>Brush print grey Multi pocket wide led cargo jean </p>
+                <p>$33.00</p>
+                <button class="add-to-cart" data-name="Grey Multi pocket wide led cargo jean " data-price="60" data-image="Images/Multi pocket wide led cargo jean 3.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Straight jean0.4.jpg">
+                <p>Grey baggy Straight jean</p>
+                <p>$35.00</p>
+                <button class="add-to-cart" data-name="Grey baggy Straight jean" data-price="35.00" data-image="Images/Straight jean0.4.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Straight jean0.3.jpg">
+                <p>Blue baggy Straight jean</p>
+                <p>$35.00</p>
+                <button class="add-to-cart" data-name="Blue baggy Straight jean" data-price="35.00" data-image="Images/Straight jean0.3.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Straight jean0.2.jpg">
+                <p>Red baggy Straight jean</p>
+                <p>$35.00</p>
+                <button class="add-to-cart" data-name="Red baggy Straight jean" data-price="35.00" data-image="Images/Straight jean0.2.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Ripped brush print jean1.jpg">
+                <p>Ripped brush print jean</p>
+                <p>$28.00</p>
+                <button class="add-to-cart" data-name="Ripped brush print jean" data-price="28.00" data-image="Images/Ripped brush print jean1.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Straight jean 0.1.jpg">
+                <p>Black baggy Straight jean</p>
+                <p>$35.00</p>
+                <button class="add-to-cart" data-name="Black baggy Straight jean" data-price="35.00" data-image="Images/Straight jean 0.1.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Straight jean.jpg">
+                <p>Blue Straight jean</p>
+                <p>$19.00</p>
+                <button class="add-to-cart" data-name="Blue Straight jean" data-price="19.00" data-image="Images/Straight jean.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Skinny jean2.jpg">
+                <p>Blue Skinny jean</p>
+                <p>$24.00</p>
+                <button class="add-to-cart" data-name="Baggy Jeans" data-price="24.00" data-image="Images/Skinny jean2.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Skinny jean1.jpg">
+                <p>Black Skinny jean</p>
+                <p>$24.00</p>
+                <button class="add-to-cart" data-name="Black Skinny jean" data-price="24.00" data-image="Images/Skinny jean1.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Trim slim-fit jean.jpg">
+                <p>Trim slim-fit jean </p>
+                <p>$38.00</p>
+                <button class="add-to-cart" data-name="Trim slim-fit jean" data-price="30.00" data-image="Images/Trim slim-fit jean.jpg">Add to Cart</button>
+            </div>
+            <div class="card jeans">
+                <img src="Images/Vintage ripped denim jean1.jpg">
+                <p>Vintage ripped denim jean</p>
+                <p>$25.00</p>
+                <button class="add-to-cart" data-name="Vintage ripped denim jean" data-price="25" data-image="Images/Vintage ripped denim jean1.jpg">Add to Cart</button>
+            </div>
+
+            <div class="card hoodies">
+                <img src="Images/Printed Hoodie 1.jpg">
+                <p>Black printed hoodie</p>
+                <p>$14.00</p>
+                <button class="add-to-cart" data-name="Black printed hoodie" data-price="14.00" data-image="Images/Printed Hoodie 1.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed Hoodie 2.jpg">
+                <p>Black & white hoodie</p>
+                <p>$19.00</p>
+                <button class="add-to-cart" data-name="Black & white hoodie" data-price="19.00" data-image="Images/Printed Hoodie 2.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed Hoodie 3.jpg">
+                <p>Skul Printed Hoodie</p>
+                <p>$16.00</p>
+                <button class="add-to-cart" data-name="Skul Printed Hoodie" data-price="16.00" data-image="Images/Printed Hoodie 3.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed Hoodie 4.jpg">
+                <p>Black Devil horn hoodie</p>
+                <p>$17.00</p>
+                <button class="add-to-cart" data-name="Black Devil horn hoodie" data-price="17.00" data-image="Images/Printed Hoodie 4.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed hoodie 5.jpg">
+                <p>Blue & white printed Hoodie</p>
+                <p>$17.00</p>
+                <button class="add-to-cart" data-name="Blue & white printed Hoodie" data-price="17.00" data-image="Images/Printed hoodie 5.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed hoodie 6.jpg">
+                <p>Liteup grey printed Hoodie</p>
+                <p>$45</p>
+                <button class="add-to-cart" data-name="Hoodie" data-price="45" data-image="Images/Printed hoodie 6.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed hoodie 7.jpg">
+                <p>Redskeleton printed hoodie</p>
+                <p>$15.00</p>
+                <button class="add-to-cart" data-name="Redskeleton printed hoodie" data-price="15.00" data-image="Images/Printed hoodie 7.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed hoodie 8.jpg">
+                <p>Grey, Pink skeleton Printed Hoodie</p>
+                <p>$25.00</p>
+                <button class="add-to-cart" data-name="Grey, Pink skeleton Printed Hoodie" data-price="25.00" data-image="Images/Printed hoodie 8.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed hoodie 10.jpg">
+                <p>Black and green printed Hoodie</p>
+                <p>$18.00</p>
+                <button class="add-to-cart" data-name="Black and green printed Hoodie" data-price="18.00" data-image="Images/Printed hoodie 10.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed hoodie 11.jpg">
+                <p>Black & white Vintage Hoodie</p>
+                <p>$21.00</p>
+                <button class="add-to-cart" data-name="Hoodie" data-price="21.00" data-image="Images/Printed hoodie 11.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed hoodie 12.jpg">
+                <p>Blue & white vintage hoodie</p>
+                <p>$21.00</p>
+                <button class="add-to-cart" data-name="Hoodie" data-price="21.00" data-image="Images/Printed hoodie 12.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed hoodie13.jpg">
+                <p>Black Stalwart printed hoodie</p>
+                <p>$19.99</p>
+                <button class="add-to-cart" data-name="Black Stalwart printed hoodie" data-price="19.99" data-image="Images/Printed hoodie13.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed hoodie14.jpg">
+                <p>Grey worldwide printed Hoodie</p>
+                <p>$14.00</p>
+                <button class="add-to-cart" data-name=">Grey worldwide printed Hoodie" data-price="14.00" data-image="Images/Printed hoodie14.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed hoodie15.jpg">
+                <p>Black Evolution grace printed Hoodie</p>
+                <p>$32.00</p>
+                <button class="add-to-cart" data-name="Black Evolution grace printed Hoodie" data-price="32.00" data-image="Images/Printed hoodie15.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed hoodie16.jpg">
+                <p>Black & purple Hoodie</p>
+                <p>$17.00</p>
+                <button class="add-to-cart" data-name="Hoodie" data-price="17.00" data-image="Images/Printed hoodie16.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Printed hoodie17.jpg">
+                <p>White Marshmellow printed hoodie</p>
+                <p>$23.00</p>
+                <button class="add-to-cart" data-name="White Marshmellow printed hoodie" data-price="23.00" data-image="Images/Printed hoodie17.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Pullover hoodie.jpg">
+                <p>Yellow pullover Hoodie</p>
+                <p>$45</p>
+                <button class="add-to-cart" data-name="Yellow pullover Hoodie" data-price="45" data-image="Images/Pullover hoodie.jpg">Add to Cart</button>
+            </div>
+            <div class="card hoodies">
+                <img src="Images/Gothic hoodie.jpg">
+                <p>Grey gothic Hoodie</p>
+                <p>$16.00</p>
+                <button class="add-to-cart" data-name="Grey gothic Hoodie" data-price="16.00" data-image="Images/Gothic hoodie.jpg">Add to Cart</button>
+            </div>
+
+            <div class="card accessories">
+                <img src="images/sunglasses.jpg">
+                <p>Sunglasses</p>
+                <p>$15</p>
+                <button class="add-to-cart" data-name="Sunglasses" data-price="15" data-image="images/sunglasses.jpg">Add to Cart</button>
+            </div>
+
+            <div class="card tees">
+                <img src="images/tee.jpg">
+                <p>Graphic Tee</p>
+                <p>$25</p>
+                <button class="add-to-cart" data-name="Graphic Tee" data-price="25" data-image="images/tee.jpg">Add to Cart</button>
+            </div>
+
+            <div class="card bottoms">
+                <img src="Images/Chicago pants1.jpg">
+                <p>Brown baggy chicago pants</p>
+                <p>$25.00</p>
+                <button class="add-to-cart" data-name="Brown baggy chicago pants" data-price="25.00" data-image="Images/Chicago pants1.jpg">Add to Cart</button>
+            </div>
+            <div class="card bottoms">
+                <img src="Images/Chicago pants2.jpg">
+                <p>Red baggy chicago pants</p>
+                <p>$25,00</p>
+                <button class="add-to-cart" data-name="Red baggy chicago pants" data-price="25.00" data-image="Images/Chicago pants2.jpg">Add to Cart</button>
+            </div>
+            <div class="card bottoms">
+                <img src="Images/Straight pants1.jpg">
+                <p>Black cotton straight pants</p>
+                <p>$36.00</p>
+                <button class="add-to-cart" data-name="Black cotton straight pants" data-price="36.00" data-image="Images/Straight pants1.jpg">Add to Cart</button>
+            </div>
+            <div class="card bottoms">
+                <img src="Images/Straight pants2.jpg">
+                <p>Grey cotton straight pants</p>
+                <p>$32.00</p>
+                <button class="add-to-cart" data-name="Grey cotton straight pants" data-price="32.00" data-image="images/tee.jpg">Add to Cart</button>
+            </div>
+            <div class="card bottoms">
+                <img src="Images/Straight pants3.jpg">
+                <p>Military baggy straight pants</p>
+                <p>$30.00</p>
+                <button class="add-to-cart" data-name="Military baggy straight pants" data-price="30.00" data-image="Images/Straight pants3.jpg">Add to Cart</button>
+            </div>
+            <div class="card bottoms">
+                <img src="Images/Baggy cotton track pants.jpg">
+                <p>White Baggy cotton track pants</p>
+                <p>$27.00</p>
+                <button class="add-to-cart" data-name="White Baggy cotton track pants" data-price="27.00" data-image="Images/Baggy cotton track pants.jpg">Add to Cart</button>
+            </div>
+            <div class="card bottoms">
+                <img src="Images/Baggy cotton track pants2.jpg">
+                <p>Black Baggy cotton track pants</p>
+                <p>$27.00</p>
+                <button class="add-to-cart" data-name="Black Baggy cotton track pants" data-price="27.00" data-image="Images/Baggy cotton track pants2.jpg">Add to Cart</button>
+            </div>
+            <div class="card bottoms">
+                <img src="Images/Straight leg trouser.jpg">
+                <p>Black Straight leg trouser</p>
+                <p>$35.00</p>
+                <button class="add-to-cart" data-name="Black Straight leg trouser" data-price="35.00" data-image="Images/Straight leg trouser.jpg">Add to Cart</button>
+            </div>
+            <div class="card bottoms">
+                <img src="Images/Straight dress pants.jpg">
+                <p>Purple Straight dress pants</p>
+                <p>$25</p>
+                <button class="add-to-cart" data-name="Purple Straight dress pants" data-price="25" data-image="Images/Straight dress pants.jpg">Add to Cart</button>
+            </div>
+            <div class="card bottoms">
+                <img src="Images/Straight dress pants1.jpg">
+                <p>Navyblue Straight dress pants</p>
+                <p>$29.00</p>
+                <button class="add-to-cart" data-name="Navyblue Straight dress pants" data-price="29.00" data-image="Images/Straight dress pants1.jpg">Add to Cart</button>
+            </div>
+            <div class="card bottoms">
+                <img src="Images/Straight dress pants2.jpg">
+                <p>Brown Straight dress pants</p>
+                <p>$29.00</p>
+                <button class="add-to-cart" data-name="Brown Straight dress pants" data-price="29.00" data-image="Images/Straight dress pants2.jpg">Add to Cart</button>
+            </div>
+            <div class="card bottoms">
+                <img src="Images/Straight dress pants3.jpg">
+                <p>Grey Straight dress pants</p>
+                <p>$29.00</p>
+                <button class="add-to-cart" data-name="Grey Straight dress pants" data-price="29.00" data-image="Images/Straight dress pants3.jpg">Add to Cart</button>
+            </div>
+            <div class="card bottoms">
+                <img src="Images/Straight dress pants4.jpg">
+                <p>White Straight dress pants</p>
+                <p>$29.00</p>
+                <button class="add-to-cart" data-name="White Straight dress pants" data-price="29.00" data-image="Images/Straight dress pants4.jpg">Add to Cart</button>
+            </div>
+
+            <div class="card shirts">
+                <img src="Images/Shirt1.jpg">
+                <p>White long sleeve shirt</p>
+                <p>$18.00</p>
+                <button class="add-to-cart" data-name="White long sleeve shirt" data-price="18.00" data-image="Images/Shirt1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Shirt2.jpg">
+                <p>Black long sleeve shirt</p>
+                <p>$18.00</p>
+                <button class="add-to-cart" data-name="Black long sleeve shirt" data-price="18.00" data-image="Images/Shirt2.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Shirt3.jpg">
+                <p>Grey long sleeve shirt</p>
+                <p>$18.00</p>
+                <button class="add-to-cart" data-name="Grey long sleeve shirt" data-price="35" data-image="Images/Shirt3.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Shirt4.jpg">
+                <p>Blue & white plaid long sleeve shirt</p>
+                <p>$18.00</p>
+                <button class="add-to-cart" data-name="Blue & white plaid long sleeve shirt" data-price="18.00" data-image="Images/Shirt4.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Shirt5.jpg">
+                <p>White & black checkered long sleeve shirt</p>
+                <p>$20.00</p>
+                <button class="add-to-cart" data-name="White & black checkered long sleeve shirt" data-price="20.00" data-image="Images/Shirt5.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Shirt6.jpg">
+                <p>Green & black checkered long sleeve shirt</p>
+                <p>$23.00</p>
+                <button class="add-to-cart" data-name="Green & black checkered long sleeve shirt" data-price="23.00" data-image="Images/Shirt6.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/shirt8.jpg">
+                <p>Red long sleeve shirt</p>
+                <p>$18.00</p>
+                <button class="add-to-cart" data-name="Red long sleeve shirt" data-price="18.00" data-image="Images/shirt8.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Shirt7.jpg">
+                <p>Red & white stripped shirt</p>
+                <p>$25.00</p>
+                <button class="add-to-cart" data-name="Red & white stripped shirt" data-price="25.00" data-image="Images/Shirt7.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/shirt9.jpg">
+                <p>Brown & white abstract textured shirt</p>
+                <p>$27.00</p>
+                <button class="add-to-cart" data-name="Brown & white abstract textured shirt" data-price="27.00" data-image="Images/shirt9.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/shirt10.jpg">
+                <p>Black & white abstract textured shirt</p>
+                <p>$27.00</p>
+                <button class="add-to-cart" data-name="Black & white abstract textured shirt" data-price="27.00" data-image="Images/shirt10.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Summer Hawaiian shirt1.jpg">
+                <p>Tropical floral pattern printed shirt</p>
+                <p>$17.00</p>
+                <button class="add-to-cart" data-name="Tropical floral pattern printed shirt" data-price="17.00" data-image="Images/Summer Hawaiian shirt1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Casual plaid flannel shirt1.jpg">
+                <p>Yellow & black Casual plaid flannel shirt</p>
+                <p>$27.00</p>
+                <button class="add-to-cart" data-name="Yellow & black Casual plaid flannel shirt" data-price="27.00" data-image="Images/Casual plaid flannel shirt1.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Casual plaid flannel shirt2.jpg">
+                <p>Black & white Casual plaid flannel shirt</p>
+                <p>$23.00</p>
+                <button class="add-to-cart" data-name="Black & white Casual plaid flannel shirt" data-price="23.00" data-image="Images/Casual plaid flannel shirt2.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Casual plaid flannel shirt3.jpg">
+                <p>Black & green Casual plaid flannel shirt</p>
+                <p>$26.00</p>
+                <button class="add-to-cart" data-name="Dress" data-price="26.00" data-image="Images/Casual plaid flannel shirt3.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Summer Hawaiian shirt2.jpg">
+                <p>Blue Summer Hawaiian shirt</p>
+                <p>$19.00</p>
+                <button class="add-to-cart" data-name="Blue Summer Hawaiian shirt" data-price="19.00" data-image="Images/Summer Hawaiian shirt2.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Summer Hawaiian shirt3.jpg">
+                <p>Orange Summer Hawaiian shirt</p>
+                <p>$19.00</p>
+                <button class="add-to-cart" data-name="Orange Summer Hawaiian shirt" data-price="19.00" data-image="Images/Summer Hawaiian shirt3.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Summer Hawaiian shirt4.jpg">
+                <p>Purple Summer Hawaiian shirt</p>
+                <p>$17.00</p>
+                <button class="add-to-cart" data-name="Purple Summer Hawaiian shirt" data-price="17.00" data-image="Images/Summer Hawaiian shirt4.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Summer Hawaiian shirt5.jpg">
+                <p>Black & white Summer Hawaiian shirt</p>
+                <p>$15.00</p>
+                <button class="add-to-cart" data-name="Black & white Summer Hawaiian shirt" data-price="15.00" data-image="Images/Summer Hawaiian shirt5.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Graphic print button up shirt.jpg">
+                <p>Black & white Graphic print button up shirt</p>
+                <p>$22.99</p>
+                <button class="add-to-cart" data-name="Black & white Graphic print button up shirt" data-price="22.99" data-image="Images/Graphic print button up shirt.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Graphic print button up shirt3.jpg">
+                <p>Brown & white Graphic print button up shirt</p>
+                <p>$21.95</p>
+                <button class="add-to-cart" data-name="Brown & white Graphic print button up shirt" data-price="21.95" data-image="Images/Graphic print button up shirt3.jpg">Add to Cart</button>
+            </div>
+            <div class="card shirts">
+                <img src="Images/Graphic print button up shirt2.jpg">
+                <p>Boo Black & white Graphic print button up shirt</p>
+                <p>$25.00</p>
+                <button class="add-to-cart" data-name="Boo Black & white Graphic print button up shirt" data-price="25.00" data-image="Images/Graphic print button up shirt2.jpg">Add to Cart</button>
+            </div>
+
+        </section>
     </main>
-
-    <script>
-let slideIndex = 5;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 10000); // Change image every 5 seconds
-}
-        </script>
+    
+    <script src="index.js"></script>
 
     <footer>
       <p>&copy; 2026 COOL DRIPS. STAY DRIPPY.</p>
