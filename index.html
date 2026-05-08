@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>COOL DRIPS | Fashion Inspiration</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         
 </head>
 <body>
@@ -15,8 +17,17 @@
             <div class="spacer-left"></div> 
             <h1 class="logo">COOL DRIPS</h1>
             <div class="header-action-links">
-                <a href="help.html" class="action-link">Help</a>
-                <a href="sign-in.html" class="action-link">Sign-in</a>
+                <div class="dropdown">
+                <button class="dropbtn">Help</button>         
+                    <div class="dropdown-content">
+                        <a href="help.html">Help</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="about-us.html">About Us</a>
+                    </div>
+                </div>
+                <a href="sign-in.html" class="login-icon">
+                <i class="fa-regular fa-user"></i>
+                </a>
             </div>
         </div>
             <div class="header-action-links-right">
@@ -36,8 +47,6 @@
         <a href="inspo.html">Outfit Inspiration</a>
        </div>
     </nav>
-
-
 
     <!--Main Content-->
     <main>
@@ -154,9 +163,66 @@
 
     <script src="index.js"></script>
    
-    <footer>
-        <p>&copy; 2026 COOL DRIPS. STAY DRIPPY.</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <h2>COOL DRIPS</h2>
+
+            <p>STAY DRIPPY.</p>
+
+            <!-- SOCIAL ICONS -->
+            <div class="social-icons">
+
+                <a href="https://instagram.com"
+                   target="_blank">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+                <a href="https://facebook.com"
+                   target="_blank">
+
+                    <i class="fab fa-facebook"></i>
+
+                </a>
+
+                <a href="https://tiktok.com"
+                   target="_blank">
+
+                    <i class="fab fa-tiktok"></i>
+
+                </a>
+
+                <a href="https://x.com"
+                   target="_blank">
+
+                    <i class="fab fa-x-twitter"></i>
+
+                </a>
+
+                <a href="https://youtube.com"
+                   target="_blank">
+
+                    <i class="fab fa-youtube"></i>
+
+                </a>
+
+            </div>
+
+            <p class="copyright">
+
+                &copy; 2026 COOL DRIPS.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
     </footer>
 
 </body>
 </html>
+

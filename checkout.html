@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | COOL DRIPS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1 class="logo">COOL DRIPS</h1>
+    </header>
+
+    <!-- CHECKOUT -->
+    <main class="checkout-page">
+
+        <!-- FORM -->
+        <section class="checkout-form">
+
+            <h2>Checkout</h2>
+
+            <form id="payment-form">
+
+                <!-- CUSTOMER INFO -->
+                <h3>Customer Information</h3>
+
+                <input type="text" placeholder="Full Name" required>
+
+                <input type="email" placeholder="Email Address" required>
+
+                <input type="tel" placeholder="Phone Number" required>
+
+                <!-- SHIPPING -->
+                <h3>Shipping Address</h3>
+
+                <input type="text" placeholder="Street Address" required>
+
+                <input type="text" placeholder="City" required>
+
+                <input type="text" placeholder="Country" required>
+
+                <input type="text" placeholder="Postal Code" required>
+
+                <!-- PAYMENT -->
+                <h3>Payment Details</h3>
+
+                <input type="text" placeholder="Cardholder Name" required>
+
+                <input type="text"
+                       placeholder="Card Number"
+                       maxlength="16"
+                       required>
+
+                <div class="card-details">
+
+                    <input type="text"
+                           placeholder="MM/YY"
+                           maxlength="5"
+                           required>
+
+                    <input type="text"
+                           placeholder="CVV"
+                           maxlength="3"
+                           required>
+
+                </div>
+
+                <button type="submit" class="pay-btn">
+                    Complete Payment
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- ORDER SUMMARY -->
+        <aside class="checkout-summary">
+
+            <h2>Order Summary</h2>
+
+            <div id="checkout-items"></div>
+
+            <hr>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">$0</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span>$15</span>
+            </div>
+
+            <div class="summary-row total-row">
+                <span>Total</span>
+                <span id="checkout-total">$0</span>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <script src="checkout.js"></script>
+
+</body>
+</html>

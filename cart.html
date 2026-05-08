@@ -36,10 +36,38 @@
     </nav>
 
     <!--Main Content-->
-    <main>
-    <h1>Shopping Cart</h1>
-    <div id="cart-items"></div>
-    <h2 id="total"></h2>
+   <main class="cart-page">
+
+        <section class="cart-container">
+            <h1>Your Cart</h1>
+
+            <div id="cart-items"></div>
+        </section>
+
+            <aside class="summary-box">
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Items Total</span>
+                <span id="items-total">$0</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span id="shipping">$15</span>
+            </div>
+
+            <div class="summary-row total-row">
+                <span>Total</span>
+                <span id="grand-total">$0</span>
+            </div>
+
+            <a href="checkout.html">
+                <button class="checkout-btn">
+                Proceed to Checkout
+            </button>
+            </a>
+
     </main>
 
 <script src="cart.js"></script>

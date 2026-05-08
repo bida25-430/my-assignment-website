@@ -1,44 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-         <meta charset="UTF-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sign In</title>
+        <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!--Header Selection -->
-    <header>
-        <div class=logo>COOL DRIPS</div>
-            <div class=nav-links>
-                <a href="help.html">Help</a>
-            </div>
-        <h1>SIGN IN</h1>
+    <header class="header">
+        <div class="logo-and-links">
+            <div class="spacer-left"></div> 
+            <h1 class="logo">COOL DRIPS</h1>
+            <div class="header-action-links">
+                <a href="help.html" class="action-link">Help</a>
+        </div>
+            <div class="header-action-links-right">
+              <a href="cart.html" class="cart-link">🛒 <span id="cart-count">0</span></a>
+            </div>  
+        </div>
     </header>
 
-    <!-- navigation -->
-     <nav>
+    <!-- Navigation -->
+    <nav>
+      <div class="topnav">
         <a href="index.html">Home</a>
-     </nav>
-
+        <a href="shop-collection.html">shop-collection</a>
+        <a href="men.html">Men</a>
+        <a href="women.html">Women</a>
+        <a href="inspo.html">Outfit Inspiration</a>
+       </div>
+    </nav>
+    
     <!--Main Content-->
-    <main>
-        <div class="login-container">
-            <h2>Enter your email to join us or sign in.</h2>
-        </div>
-    <form>
-        <div class="input-group">
-            <input type="email" id="email" placeholder="Email" required>
-        </div>
-            <p class="terms">
-                By continuing, I agree to COOL DRIPS's <a href="#">Privacy Policy</a> and
-                <a href="#">Terms of user</a>.
+    <main class="auth-container">
+
+        <section class="auth-box" id="login-page">
+
+            <h2>Sign In</h2>
+
+            <form id="login-form">
+
+                <input type="email"
+                       id="login-email"
+                       placeholder="Email Address"
+                       required>
+
+                <input type="password"
+                       id="login-password"
+                       placeholder="Password"
+                       required>
+
+                <button type="submit" class="auth-btn">
+                    Sign In
+                </button>
+
+            </form>
+
+            <p class="switch-text">
+                Don't have an account?
+                <span onclick="showCreateAccount()">
+                    Create Account
+                </span>
             </p>
-        <div class="button-container">
-            <button type="submit"
-            class="continue-btn">Continue</button>
-        </div>
-    <form>
+            
+        </section>
+
+        <!-- CREATE ACCOUNT PAGE -->
+        <section class="auth-box hidden" id="create-page">
+
+            <h2>Create Account</h2>
+
+            <form id="create-form">
+
+                <input type="text"
+                       id="name"
+                       placeholder="First Name"
+                       required>
+
+                <input type="text"
+                       id="surname"
+                       placeholder="Surname"
+                       required>
+
+                <input type="email"
+                       id="create-email"
+                       placeholder="Email Address"
+                       required>
+
+                <input type="password"
+                       id="create-password"
+                       placeholder="Create Password"
+                       required>
+
+                <input type="password"
+                       id="confirm-password"
+                       placeholder="Confirm Password"
+                       required>
+
+                <button type="submit" class="auth-btn">
+                    Create Account
+                </button>
+
+            </form>
+
+            <p class="switch-text">
+                Already have an account?
+                <span onclick="showLogin()">
+                    Sign In
+                </span>
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="sign-in.js"></script>
             
     <footer>
         <p>&copy; 2026 COOL DRIPS. STAY DRIPPY.</p>
