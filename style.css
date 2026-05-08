@@ -37,12 +37,12 @@ body {
 }
 
 .header-action-links {
-    Display: flex;
-    Gap: 10px; 
-    Margin-left: auto; 
-    Flex: 1; 
-    Justify-content: flex-end;
-    margin-right: -150px;
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+    flex: 1;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 .action-link {
@@ -67,12 +67,13 @@ body {
 }
 
 .header-action-links-right input[type=text] {
-  padding: 6px;
-  
+  padding: 8px 12px;
   margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
-  margin-left: 80px;  
+  margin-right: 10px;
+  font-size: 16px;
+  width: 220px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 600px) {
@@ -149,6 +150,52 @@ body {
     color: #666;
 }
 
+/* MOBILE HEADER */
+@media (max-width: 768px) {
+
+    .logo-and-links {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 22px;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+
+    .header-action-links {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .header-action-links-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-action-links-right input[type=text] {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .topnav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .topnav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+}
+
+
 /* Navigation */
 .topnav {
   overflow: hidden;
@@ -179,8 +226,6 @@ body {
   background-color: #ddd;
   color: black;
 }
-
-
 
 /* Slideshow */
 .slideshow-container {
